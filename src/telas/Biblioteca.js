@@ -17,6 +17,7 @@ import EstiloComum from '../EstiloComum';
 import ActionButton from 'react-native-action-button'
 import AdicionarLivros from '../telas/AdicionarLivros' 
 import { YellowBox } from 'react-native';
+import { Actions } from 'react-native-router-flux'
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader','Async Storage'])
 
 class Biblioteca extends Component{

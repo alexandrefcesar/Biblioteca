@@ -24,12 +24,14 @@ import {modificaAluguel,adicionaLivro} from '../actions/AplicacaoAcoes'
 const Alugar = props =>(
             <View style={styles.container}>
                   <Header/>
-                  <TextInput 
-                    placeholder= 'Adicionar Livro'
-                    style={{fontSize:20,height:45}}
-                    // funcao de callback
-                    onChangeText={(texto)=> props.modificaAluguel(texto)}
-                    value={props.adicionar_livro_usuario}/>
+                  	<Text style={{color : 'black'}}>Nome de Usuário: Teste {"\n"}</Text>
+					<Text style={styles.TextStyle}>Livros Alugados</Text>
+					<View
+						style={{
+							borderBottomColor: 'black',
+							borderBottomWidth: 1,
+						}}
+					/>
                 <View style={styles.bibliotecaContainer}>
                     <FlatList data={false}
                     keyExtractor={item => `${item.id}`}
@@ -74,6 +76,11 @@ const styles= StyleSheet.create({
         flex:7,
         color:'#fafafa'
 
+    },
+	TextStyle:{
+        color:'black',
+		fontSize: 20,
+		textAlign:'center'
     },
     iconBar:{
         marginTop:Platform.OS == 'ios' ? 30:10,

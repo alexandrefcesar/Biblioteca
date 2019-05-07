@@ -53,7 +53,7 @@ return(
         <Icon name='book' size={30}  paddingRight={10}
                 color={'#313131'}/>
               <View>
-                 <TouchableHighlight onPress={() => Actions.biblioteca() }>
+                 <TouchableHighlight onPress={() => Actions.formAlugar({desc:props.desc, id : props.id}) }>
                         <Text style={{ fontSize: 15 ,color:'#1770c9', paddingLeft:30}}>Alugar</Text>
                 </TouchableHighlight>
                 <Text style={[styles.description,descStyle]}>
